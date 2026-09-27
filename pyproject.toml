@@ -43,7 +43,7 @@ dependencies = [
     "torch>=2.9,<2.15",
     "gymnasium",
     "imageio",
-    "etils",
+    "etils[epath]",
     "hydra-core>=1.3",
     "tensordict",
     "rsl-rl-lib>=5.0.0",
