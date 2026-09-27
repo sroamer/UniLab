@@ -77,6 +77,26 @@ make setup
 uv run demo dance
 ```
 
+## Using venv
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+git clone https://github.com/unilabsim/UniLab.git
+cd UniLab
+
+python -m venv .venv
+.\.venv\Scripts\activate
+
+pip install --upgrade "uv==0.12.5" #upgrade uv as needed
+uv sync
+uv sync --extra motrix
+uv pip install unilab[motrix]
+uv build
+
+# Downloads the checkpoint and assets from Hugging Face on first run.
+uv run demo dance
+```
+
 For Windows, macOS, CUDA, ROCm, XPU, optional backends, and headless rendering,
 use the [installation guide](https://unilabsim.github.io/UniLab-doc/en/1-getting_started/2-installation.html)
 and [quick demo guide](https://unilabsim.github.io/UniLab-doc/en/1-getting_started/1-quick_demo.html).
